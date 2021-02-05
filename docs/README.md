@@ -1,4 +1,4 @@
-# :pill: Drug Molecule Properties Forecasting
+# 💊 Drug Molecule Properties Forecasting
 
 Project to predict drug molecules properties with Deep Learning
 

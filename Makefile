@@ -6,3 +6,8 @@ lab:
 
 start:
 	flask run
+
+mkdocs:
+	mkdocs build
+	mkdocs serve
+

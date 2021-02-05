@@ -1,6 +1,6 @@
 import setuptools
 
-from model import __version__
+from smiley import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -17,6 +17,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     python_requires=">=3.6",
     entry_points={
-        "console_scripts": ["servier=src.__main__:main"],
+        "console_scripts": ["servier=main:main"],
     },
 )

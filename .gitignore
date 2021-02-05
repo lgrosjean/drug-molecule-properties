@@ -130,7 +130,9 @@ dmypy.json
 
 # data
 data/*
-!data/gitkeep
+!data/.gitkeep
 
 # AdHoc
 .vscode/
+mlruns/
+nbs/

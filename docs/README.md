@@ -27,17 +27,17 @@ Then, install depencies:
 
 Finally, build local project into a propre Python package:
 ```shell
-$ pip install . -U
+(myenv) $ pip install . -U
 ```
 
 *Check your installation*
 
 ```shell 
-$ python
+(myenv) $ python
 ```
 ```python
->>> import drug_prophet
->>> print(drug_prophet.__version__)
+>>> import smiley
+>>> print(smiley.__version__)
 "0.0.1"
 ```
 

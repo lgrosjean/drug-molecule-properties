@@ -23,7 +23,7 @@ theme:
     repo: fontawesome/brands/git-alt
 
 nav:
-  - Home: index.md
+  - Home: README.md
 
 markdown_extensions:
   - meta

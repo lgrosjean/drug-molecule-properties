@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Results</title>
+<div class="container">
+    <h1>Predictions</h1>
+    <hr>
+    <div>
+        <p>Smile prediction: {{result.prediction }}</p>
+    </div>
+    <a href="{{ url_for('inputs') }}" class="btn btn-default">Back</a>
+</div>
+
+{% endblock %}

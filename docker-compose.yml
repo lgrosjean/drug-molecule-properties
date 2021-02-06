@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  app:
+    build: ./app
+    image: flask-app
+    container_name: app
+    ports:
+      - "5000:5000"
+  serving:
+    build: ./model
+    image: tf-models
+    container_name: tf
+    ports:
+      - "8500:8500"
+      - "8501:8501"
+    command: --model_config_file=/config/config.conf

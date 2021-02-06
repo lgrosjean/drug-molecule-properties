@@ -237,7 +237,7 @@ class SingleTrainer:
         return function(self.y_test, y_pred, *args, **kwargs)
         
         
-def train(trainer, experiment_name, *args, **kwargs): 
+def train(trainer, experiment_name, version='1', *args, **kwargs): 
     
     owd = os.getcwd()
     os.chdir(Paths().root_dir)
@@ -276,6 +276,12 @@ def train(trainer, experiment_name, *args, **kwargs):
         y_pred = trainer.model.model.predict(X_train)
         signature = infer_signature(X_train, y_pred)
         mlflow.keras.log_model(model, model_name, signature=signature)
+        models_path = Paths().model / "models"
+        if not models_path.exists():
+            models_path.mkdir()
+        model_path = models_path / model_name / version
+        model.save(model_path)
+        logging.info(f"Model exported at {model_path}.")
 
     os.chdir(owd)
     

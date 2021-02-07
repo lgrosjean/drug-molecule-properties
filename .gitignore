@@ -136,3 +136,4 @@ data/*
 .vscode/
 mlruns/
 nbs/
+model/models/

@@ -4,10 +4,19 @@ mlflow:
 lab:
 	jupyter lab
 
-start:
-	flask run
+build:
+	docker build . -t servier
+
+run:
+	docker run --name servier -it servier
+
 
 mkdocs:
 	mkdocs build
 	mkdocs serve
 
+start:
+	docker-compose up
+
+help:
+	cat Makefile

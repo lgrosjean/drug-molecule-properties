@@ -24,6 +24,15 @@ theme:
 
 nav:
   - Home: README.md
+  - Getting started:
+      - Installation: installation.md
+      - Train your models: training.md
+  - References:
+      - train.md
+      - learner.md
+      - model.md
+      - dataset.md
+      - utils.md
 
 markdown_extensions:
   - meta

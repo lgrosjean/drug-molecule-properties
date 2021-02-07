@@ -1,5 +1,6 @@
 import sys
 import argparse
+from .train import train as _train
 
 
 def format_msg(msg, inputs=None):

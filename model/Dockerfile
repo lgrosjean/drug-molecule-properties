@@ -1,6 +1,6 @@
 FROM tensorflow/serving
 
-COPY models/single_model/ /models/single_model
+COPY models/ /models/
 
 COPY config.conf /config/config.conf
 

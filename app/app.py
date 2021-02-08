@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 
+from utils import smile2bytes, Prediction
+
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
@@ -8,11 +10,12 @@ bootstrap = Bootstrap(app)
 @app.route("/", methods=["GET", "POST"])
 def inputs():
     if request.method == "POST":
-        smile = request.values.get("inputSmile")
-        result = {
-            "prediction": smile,
-        }
-        return render_template("results.html", result=result)
+        model = request.form["options"]
+        inputs = request.values.get("inputSmile")
+        prediction = Prediction(model=model, inputs=inputs)
+        res = prediction.predict()
+        print(res)
+        return render_template("results.html", result=res)
     return render_template("inputs.html")
 
 

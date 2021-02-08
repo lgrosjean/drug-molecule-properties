@@ -1,3 +1,12 @@
+"""This module contains all the classes defining the Keras model to solve the two problems: Model 1 and Model 2.
+
+It defines a base class: `BaseModel` to instanciate default arguments and methods.
+
+The most important parts are defined in the two mains classes: 
+
+ - `Model1`
+ - `Model2`
+"""
 import tensorflow as tf
 from tensorflow.keras import Model, Input
 from tensorflow.keras.layers import (
@@ -77,6 +86,20 @@ class BaseModel:
 
 
 class Model1(BaseModel):
+    """Model class which defines the core Keras model for the problem 1. The model is the following:
+
+    ```python
+    inputs = Input(shape=(self.input_shape,))
+    norm = Normalization()(inputs)
+    dense_1 = Dense(32, activation="relu")(norm)
+    relu_1 = ReLU()(dense_1)
+    dense_2 = Dense(32, activation="relu")(relu_1)
+    outputs = Dense(1, activation="sigmoid")(dense_2)
+
+    self.model = Model(inputs=inputs, outputs=outputs, name=self.name)
+    ```
+    """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.model_type = "model_1"
@@ -95,6 +118,32 @@ class Model1(BaseModel):
 
 
 class Model2(BaseModel):
+    """Model class which defines the core Keras model for the problem 2. The model is the following:
+
+    ```python
+    inputs = Input(shape=(1,), dtype=tf.string, name="inputs")
+    x = TextVectorization(
+        max_tokens=5000,
+        ngrams=self.ngrams,
+        output_sequence_length=self.vocab_size,
+        name="text_vectorization",
+    )(inputs)
+    x = Embedding(
+        input_dim=self.vocab_size,
+        output_dim=self.emb_output_dim,
+        input_length=self.emb_input_length,
+        name="embedding",
+    )(x)
+    x = Dropout(0.3, name="dropout_1")(x)
+    x = Conv1D(filters=32, kernel_size=5, activation="relu", name="conv1d")(x)
+    x = MaxPooling1D(pool_size=2, name="max_pooling")(x)
+    x = LSTM(self.lstm_cell, name="lstm")(x)
+
+    output = Dense(1, activation="sigmoid", name="output_P1")(x)
+    self.model = Model(inputs=inputs, outputs=output)
+    ```
+    """
+
     def __init__(
         self,
         embedding_vector_length: int = 32,

@@ -9,7 +9,9 @@ You will need two software to install with Docker tools, if you havent them alre
 
 Docker is an interesing tools, but a bit complex to explain in a few words. If you follow the following steps, everything will be ready.
 
-You will also need your two models trained. If you havent trained them already, you can dowload the pre-trained model directly and unzip them in the `model` folder. You can also train them directly through command-line with the `smiley` package previously installed.
+You will also need your two models trained. If you havent trained them already, you can dowload the pre-trained model directly and unzip them in the `model` folder. The zip file can be downloaded from the GitHub release page: https://github.com/lgrosjean/drug-molecule-properties/releases/tag/v0.0.2 (or directly from [this link](https://github.com/lgrosjean/drug-molecule-properties/files/5945779/models.zip "Models")).
+
+You can also train them directly through command-line with the `smiley` package previously installed.
 
 ## Prepare the image
 

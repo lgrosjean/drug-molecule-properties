@@ -14,7 +14,7 @@
     
     
       
-        <title>Utils - Smile Prediction</title>
+        <title>utils.py - Smile Prediction</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Utils
+              utils.py
             
           </span>
         </div>
@@ -178,7 +178,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../installation/" class="md-tabs__link">
+      <a href="../architecture/" class="md-tabs__link">
         Getting started
       </a>
     </li>
@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
-        Installation
+      <a href="../architecture/" class="md-nav__link">
+        Models' architecture
       </a>
     </li>
   
@@ -306,8 +306,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../training/" class="md-nav__link">
-        Train your models
+      <a href="../play/" class="md-nav__link">
+        Play with your models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        Deploy your application
       </a>
     </li>
   
@@ -352,7 +364,31 @@
   
     <li class="md-nav__item">
       <a href="../train/" class="md-nav__link">
-        Train
+        train.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluate/" class="md-nav__link">
+        evaluate.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../predict/" class="md-nav__link">
+        predict.py
       </a>
     </li>
   
@@ -364,7 +400,7 @@
   
     <li class="md-nav__item">
       <a href="../learner/" class="md-nav__link">
-        Learner
+        learner.py
       </a>
     </li>
   
@@ -376,7 +412,7 @@
   
     <li class="md-nav__item">
       <a href="../mlflow/" class="md-nav__link">
-        Mlflow
+        mlflow.py
       </a>
     </li>
   
@@ -388,7 +424,7 @@
   
     <li class="md-nav__item">
       <a href="../model/" class="md-nav__link">
-        Model
+        model.py
       </a>
     </li>
   
@@ -400,7 +436,7 @@
   
     <li class="md-nav__item">
       <a href="../dataset/" class="md-nav__link">
-        Dataset
+        dataset.py
       </a>
     </li>
   
@@ -418,12 +454,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Utils
+          utils.py
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Utils
+        utils.py
       </a>
       
         
@@ -610,7 +646,7 @@
               
                 
                 
-                  <h1>Utils</h1>
+                  <h1>utils.py</h1>
                 
                 <div class="doc doc-object doc-module">
 <h2 class="hidden-toc" id="smiley.utils" style="visibility: hidden; position: absolute;">
@@ -655,7 +691,7 @@
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="smiley.utils.Paths.__init__">
 
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src_dirname</span><span class="o">=</span><span class="s1">'smiley'</span><span class="p">,</span> <span class="n">data_dirname</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span> <span class="n">app_dirname</span><span class="o">=</span><span class="s1">'app'</span><span class="p">,</span> <span class="n">model_dirname</span><span class="o">=</span><span class="s1">'model'</span><span class="p">,</span> <span class="n">mlruns_dirname</span><span class="o">=</span><span class="s1">'mlruns'</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">src_dirname</span><span class="o">=</span><span class="s1">'smiley'</span><span class="p">,</span> <span class="n">data_dirname</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span> <span class="n">app_dirname</span><span class="o">=</span><span class="s1">'app'</span><span class="p">,</span> <span class="n">model_dirname</span><span class="o">=</span><span class="s1">'model'</span><span class="p">,</span> <span class="n">mlruns_dirname</span><span class="o">=</span><span class="s1">'mlruns'</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
@@ -730,6 +766,7 @@
           <div class="highlight">
 <pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
+    <span class="n">root_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">src_dirname</span><span class="o">=</span><span class="s2">"smiley"</span><span class="p">,</span>
     <span class="n">data_dirname</span><span class="o">=</span><span class="s2">"data"</span><span class="p">,</span>
     <span class="n">app_dirname</span><span class="o">=</span><span class="s2">"app"</span><span class="p">,</span>
@@ -747,7 +784,10 @@
 <span class="sd">        mlruns_dirname (str, optional): Name of the MlFlow runs directory to save trainings. Defaults to "mlruns".</span>
 <span class="sd">        force (bool, optional): [description]. Defaults to False.</span>
 <span class="sd">    """</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">root_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">root_dir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">root_dir</span><span class="p">)</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">src_dirname</span> <span class="o">=</span> <span class="n">src_dirname</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">data_dirname</span> <span class="o">=</span> <span class="n">data_dirname</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">app_dirname</span> <span class="o">=</span> <span class="n">app_dirname</span>
@@ -925,7 +965,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dataset
+                dataset.py
               </div>
             </div>
           </a>

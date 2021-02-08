@@ -14,7 +14,7 @@
     
     
       
-        <title>Learner - Smile Prediction</title>
+        <title>learner.py - Smile Prediction</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Learner
+              learner.py
             
           </span>
         </div>
@@ -178,7 +178,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../installation/" class="md-tabs__link">
+      <a href="../architecture/" class="md-tabs__link">
         Getting started
       </a>
     </li>
@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
-        Installation
+      <a href="../architecture/" class="md-nav__link">
+        Models' architecture
       </a>
     </li>
   
@@ -306,8 +306,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../training/" class="md-nav__link">
-        Train your models
+      <a href="../play/" class="md-nav__link">
+        Play with your models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        Deploy your application
       </a>
     </li>
   
@@ -352,7 +364,31 @@
   
     <li class="md-nav__item">
       <a href="../train/" class="md-nav__link">
-        Train
+        train.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluate/" class="md-nav__link">
+        evaluate.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../predict/" class="md-nav__link">
+        predict.py
       </a>
     </li>
   
@@ -370,12 +406,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Learner
+          learner.py
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Learner
+        learner.py
       </a>
       
         
@@ -513,7 +549,7 @@
   
     <li class="md-nav__item">
       <a href="../mlflow/" class="md-nav__link">
-        Mlflow
+        mlflow.py
       </a>
     </li>
   
@@ -525,7 +561,7 @@
   
     <li class="md-nav__item">
       <a href="../model/" class="md-nav__link">
-        Model
+        model.py
       </a>
     </li>
   
@@ -537,7 +573,7 @@
   
     <li class="md-nav__item">
       <a href="../dataset/" class="md-nav__link">
-        Dataset
+        dataset.py
       </a>
     </li>
   
@@ -549,7 +585,7 @@
   
     <li class="md-nav__item">
       <a href="../utils/" class="md-nav__link">
-        Utils
+        utils.py
       </a>
     </li>
   
@@ -706,7 +742,7 @@
               
                 
                 
-                  <h1>Learner</h1>
+                  <h1>learner.py</h1>
                 
                 <div class="doc doc-object doc-module">
 <h2 class="hidden-toc" id="smiley.learner" style="visibility: hidden; position: absolute;">
@@ -1046,7 +1082,7 @@
 <div class="doc doc-object doc-method">
 <h3 class="doc doc-heading" id="smiley.learner.OneColLearner.evaluate">
 
-<code class="highlight language-python"><span class="n">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">f1_score</span> <span class="n">at</span> <span class="mh">0x7fc9cc1587b8</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">X_test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">f1_score</span> <span class="n">at</span> <span class="mh">0x7ff06d0cdbf8</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">X_test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
       </h3>
@@ -1069,7 +1105,7 @@
 <td>
 <p>the metric function. From <code>sklearn.metrics</code>. Defaults to f1_score.</p>
 </td>
-<td><code>&lt;function f1_score at 0x7fc9cc1587b8&gt;</code></td>
+<td><code>&lt;function f1_score at 0x7ff06d0cdbf8&gt;</code></td>
 </tr>
 <tr>
 <td><code>X_test</code></td>
@@ -1491,7 +1527,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../train/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../predict/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1500,7 +1536,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Train
+                predict.py
               </div>
             </div>
           </a>
@@ -1512,7 +1548,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mlflow
+                mlflow.py
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

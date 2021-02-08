@@ -180,7 +180,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="installation/" class="md-tabs__link">
+      <a href="architecture/" class="md-tabs__link">
         Getting started
       </a>
     </li>
@@ -292,25 +292,19 @@
     Quick start
   </a>
   
-    <nav class="md-nav" aria-label="Quick start">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask-application" class="md-nav__link">
+    Flask application
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#use-with-docker" class="md-nav__link">
-    Use with Docker
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -352,8 +346,8 @@
   
   
     <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
-        Installation
+      <a href="architecture/" class="md-nav__link">
+        Models' architecture
       </a>
     </li>
   
@@ -364,8 +358,20 @@
   
   
     <li class="md-nav__item">
-      <a href="training/" class="md-nav__link">
-        Train your models
+      <a href="play/" class="md-nav__link">
+        Play with your models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploy/" class="md-nav__link">
+        Deploy your application
       </a>
     </li>
   
@@ -408,7 +414,31 @@
   
     <li class="md-nav__item">
       <a href="train/" class="md-nav__link">
-        Train
+        train.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="evaluate/" class="md-nav__link">
+        evaluate.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="predict/" class="md-nav__link">
+        predict.py
       </a>
     </li>
   
@@ -420,7 +450,7 @@
   
     <li class="md-nav__item">
       <a href="learner/" class="md-nav__link">
-        Learner
+        learner.py
       </a>
     </li>
   
@@ -432,7 +462,7 @@
   
     <li class="md-nav__item">
       <a href="mlflow/" class="md-nav__link">
-        Mlflow
+        mlflow.py
       </a>
     </li>
   
@@ -444,7 +474,7 @@
   
     <li class="md-nav__item">
       <a href="model/" class="md-nav__link">
-        Model
+        model.py
       </a>
     </li>
   
@@ -456,7 +486,7 @@
   
     <li class="md-nav__item">
       <a href="dataset/" class="md-nav__link">
-        Dataset
+        dataset.py
       </a>
     </li>
   
@@ -468,7 +498,7 @@
   
     <li class="md-nav__item">
       <a href="utils/" class="md-nav__link">
-        Utils
+        utils.py
       </a>
     </li>
   
@@ -509,25 +539,19 @@
     Quick start
   </a>
   
-    <nav class="md-nav" aria-label="Quick start">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask-application" class="md-nav__link">
+    Flask application
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#use-with-docker" class="md-nav__link">
-    Use with Docker
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -545,9 +569,8 @@
                 
                 
                 <h1 id="drug-molecule-properties-forecasting">💊 Drug Molecule Properties Forecasting</h1>
-<p>Project to predict drug molecules properties with Deep Learning</p>
+<p>The goal of this project is to predict drug molecules properties with Deep Learning. </p>
 <h2 id="quick-start">Quick start</h2>
-<h3 id="installation">Installation</h3>
 <p><em>This process supposes that you have <a href="https://www.anaconda.com/distribution/" title="Anaconda homepage">Anaconda</a> (or <a href="https://docs.conda.io/en/latest/miniconda.html" title="Miniconda homepage">Miniconda</a>) already installed, with <a href="https://git-scm.com/downloads" title="Git download page">git</a>.</em></p>
 <p>To install current project locally and access it, first clone the project (do not copy the <code>$</code> symbol, it only indicates that they are terminal commands):<br />
 <div class="highlight"><pre><span></span><code>$ git clone https://github.com/lgrosjean/drug-molecule-properties.git
@@ -568,10 +591,13 @@ $ conda activate myenv
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">smiley</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">smiley</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-<span class="s2">&quot;0.0.1&quot;</span>
+<span class="s2">&quot;0.0.2&quot;</span>
 </code></pre></div></p>
-<h3 id="use-with-docker">Use with Docker</h3>
-<p>https://github.com/ageron/handson-ml2/tree/master/docker</p>
+<p>To have a better understanding of the package and how to play with your models, please follow <a href="play/">this documentation</a>.</p>
+<h2 id="flask-application">Flask application</h2>
+<p>To install your Flask application, please see <a href="deploy/">this documentation</a>.</p>
+<h2 id="references">References</h2>
+<p>A full package references is also available for information <a href="/train/">here</a>.</p>
                 
               
               
@@ -591,13 +617,13 @@ $ conda activate myenv
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
         
-          <a href="installation/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="architecture/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Models' architecture
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -14,7 +14,7 @@
     
     
       
-        <title>Installation - Smile Prediction</title>
+        <title>Play with your models - Smile Prediction</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#play-with-your-models" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Installation
+              Play with your models
             
           </span>
         </div>
@@ -180,7 +180,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../architecture/" class="md-tabs__link md-tabs__link--active">
         Getting started
       </a>
     </li>
@@ -294,6 +294,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        Models' architecture
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -304,9 +316,126 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Play with your models
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installation
+        Play with your models
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-training" class="md-nav__link">
+    CLI Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-training" class="md-nav__link">
+    In-Python Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examine-your-models-with-mlflow" class="md-nav__link">
+    Examine your models with MlFlow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-evaluation" class="md-nav__link">
+    CLI evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-evaluation" class="md-nav__link">
+    In-Python evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prediction" class="md-nav__link">
+    Prediction
+  </a>
+  
+    <nav class="md-nav" aria-label="Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-prediction" class="md-nav__link">
+    CLI prediction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-evaluation_1" class="md-nav__link">
+    In-python evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -317,8 +446,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../training/" class="md-nav__link">
-        Train your models
+      <a href="../deploy/" class="md-nav__link">
+        Deploy your application
       </a>
     </li>
   
@@ -361,7 +490,31 @@
   
     <li class="md-nav__item">
       <a href="../train/" class="md-nav__link">
-        Train
+        train.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluate/" class="md-nav__link">
+        evaluate.py
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../predict/" class="md-nav__link">
+        predict.py
       </a>
     </li>
   
@@ -373,7 +526,7 @@
   
     <li class="md-nav__item">
       <a href="../learner/" class="md-nav__link">
-        Learner
+        learner.py
       </a>
     </li>
   
@@ -385,7 +538,7 @@
   
     <li class="md-nav__item">
       <a href="../mlflow/" class="md-nav__link">
-        Mlflow
+        mlflow.py
       </a>
     </li>
   
@@ -397,7 +550,7 @@
   
     <li class="md-nav__item">
       <a href="../model/" class="md-nav__link">
-        Model
+        model.py
       </a>
     </li>
   
@@ -409,7 +562,7 @@
   
     <li class="md-nav__item">
       <a href="../dataset/" class="md-nav__link">
-        Dataset
+        dataset.py
       </a>
     </li>
   
@@ -421,7 +574,7 @@
   
     <li class="md-nav__item">
       <a href="../utils/" class="md-nav__link">
-        Utils
+        utils.py
       </a>
     </li>
   
@@ -451,6 +604,109 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-training" class="md-nav__link">
+    CLI Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-training" class="md-nav__link">
+    In-Python Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examine-your-models-with-mlflow" class="md-nav__link">
+    Examine your models with MlFlow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-evaluation" class="md-nav__link">
+    CLI evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-evaluation" class="md-nav__link">
+    In-Python evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prediction" class="md-nav__link">
+    Prediction
+  </a>
+  
+    <nav class="md-nav" aria-label="Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-prediction" class="md-nav__link">
+    CLI prediction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python-evaluation_1" class="md-nav__link">
+    In-python evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -462,8 +718,84 @@
               
                 
                 
-                <h1 id="installation">Installation</h1>
-<p>To install more precisely all features, follow the following steps:</p>
+                <h1 id="play-with-your-models">Play with your models</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>The following steps supposed you have already cloned the project into your working directory. If not, follow the <a href="..">Getting Started</a> instructions.</p>
+<p>Also, you will need the raw dataset <code>dataset_multi.csv</code>. This dataset is not provided in the project (you should have access to). You only need to put this file inside the root <code>data</code> directory.</p>
+<p>After having followed these instructions, you have normally installed the <code>smiley</code> package locally in your conda environment and so, you have at disposal a new command line function: <code>servier</code>.</p>
+<p>To check if the installation is ready, just ask for the documentation </p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>myenv<span class="o">)</span> $ servier --help
+usage: servier <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--kwargs <span class="o">[</span>KWARGS <span class="o">[</span>KWARGS ...<span class="o">]]]</span>
+               <span class="o">{</span>train,evaluate,predict<span class="o">}</span> <span class="o">{</span>model1,model2<span class="o">}</span> data_dir save_dir
+
+Arguments <span class="k">for</span> task <span class="o">(</span>training, evaluate, predict<span class="o">)</span>
+
+positional arguments:
+  <span class="o">{</span>train,evaluate,predict<span class="o">}</span>
+  <span class="o">{</span>model1,model2<span class="o">}</span>       choice of model
+  data_dir              location of data directory
+  save_dir              location of the directory to save both mlflow runs and
+                        model
+
+optional arguments:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  --kwargs <span class="o">[</span>KWARGS <span class="o">[</span>KWARGS ...<span class="o">]]</span>
+                        extra args
+</code></pre></div>
+<h2 id="training">Training</h2>
+<p>To train your models, you have two options:</p>
+<ol>
+<li>Train from the Command Line</li>
+<li>Train in Python</li>
+</ol>
+<p>After having trained your model through one of these two methods, the model will be saved both in MlFlow Tracking (see below) and in the <code>model</code> directory which will be used for the <a href="../deploy/">deployement</a>.</p>
+<p>For example, if you train the <code>model1</code>, you will find in the <code>model/model/model1</code> directory a <code>0</code> directory containing the model trained.</p>
+<p>If you train the two models, the directory will look like this:
+<div class="highlight"><pre><span></span><code>model
+├── Dockerfile
+├── config.conf
+├── models
+│   ├── model1
+│   │   └── <span class="m">0</span>
+│   │       ├── assets
+│   │       ├── saved_model.pb
+│   │       └── variables
+│   │           ├── variables.data-00000-of-00001
+│   │           └── variables.index
+│   └── model2
+│       └── <span class="m">0</span>
+│           ├── assets
+│           ├── saved_model.pb
+│           └── variables
+│               ├── variables.data-00000-of-00001
+│               └── variables.index
+</code></pre></div></p>
+<p>The <code>Dockerfile</code> and <code>config.conf</code> file are mandatory to deploy the Tensorflow Server.</p>
+<h3 id="cli-training">CLI Training</h3>
+<p>Thanks to the previous package installation, you have access to training through Command Line. Just run:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>myenv<span class="o">)</span> $ servier train <span class="o">{</span>model<span class="o">}</span> <span class="o">{</span>data_dir<span class="o">}</span> <span class="o">{</span>root_dir<span class="o">}</span>
+</code></pre></div>
+<p>The training will process and the models will be stored both in MlFlow Tracking (see below). Also, the weights of the model will be available inside</p>
+<h3 id="in-python-training">In-Python Training</h3>
+<h3 id="examine-your-models-with-mlflow">Examine your models with MlFlow</h3>
+<p>The training process is based on MlFlow Tracking Server. If you don't know what MlFlow is and how to use it, dont hesitate to follow <a href="https://mlflow.org/docs/latest/index.html" title="MlFlow Documentation">their (strong) documentation</a>. In a few words, MLflow is an open source platform for managing the end-to-end machine learning lifecycle.</p>
+<p>Especially, it helps to record and compare parameters and results for differents experiments.</p>
+<p>After some training, all the experiments will be stored in the <code>mlruns</code> folder. By default, this one is at the root of your project. To explore the runs, juste enter the UI provided with MlFlow (dont hesitate to change the port name because, by default, the port is the same as Flask application)</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>myenv<span class="o">)</span> $ mlflow ui --port <span class="m">54180</span>
+</code></pre></div>
+<p>The UI looks like the below image, on which you can look for experiments (at the left), and inside experiments, look for the previous runs for this experiment. 
+<img alt="Mlflow-ui" src="https://user-images.githubusercontent.com/34337781/107247673-d1c19a80-6a31-11eb-95c1-34caad5f5bf8.png" /></p>
+<p>For example, for one runs, by clicking on it, you will retrieve the hyperparameters for this run, and the metrics computed during the run:
+<img alt="Mlflow-run" src="https://user-images.githubusercontent.com/34337781/107249702-e43cd380-6a33-11eb-8b10-0b31797e3072.png" /></p>
+<p>A strong utilty provided with MlFlow is the ability to save artifacts and especially model weights. In addition to the model, MlFlow also saved the conda environnement in which the training was made (in the below example, you can see the Tensorflow SavedModel exported in the corresponding artifacts).</p>
+<p><img alt="Mlflow-artifacts" src="https://user-images.githubusercontent.com/34337781/107250377-2cf48c80-6a34-11eb-8d92-4a55808242d9.png" /></p>
+<p>If you want to deep dive on how MlFlow has been set up and other custom tools to deal with it, dont hesitate to have a look at the reference <a href="../mlflow/">Mlflow</a>.</p>
+<h2 id="evaluation">Evaluation</h2>
+<h3 id="cli-evaluation">CLI evaluation</h3>
+<h3 id="in-python-evaluation">In-Python evaluation</h3>
+<h2 id="prediction">Prediction</h2>
+<h3 id="cli-prediction">CLI prediction</h3>
+<h3 id="in-python-evaluation_1">In-python evaluation</h3>
                 
               
               
@@ -482,7 +814,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -491,19 +823,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Models' architecture
               </div>
             </div>
           </a>
         
         
-          <a href="../training/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../deploy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Train your models
+                Deploy your application
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

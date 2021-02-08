@@ -14,7 +14,7 @@
     
     
       
-        <title>dataset.py - Smile Prediction</title>
+        <title>evaluate.py - Smile Prediction</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smiley.dataset" class="md-skip">
+        <a href="#smiley.evaluate" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              dataset.py
+              evaluate.py
             
           </span>
         </div>
@@ -373,11 +373,45 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../evaluate/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          evaluate.py
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         evaluate.py
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#smiley.evaluate" class="md-nav__link">
+    smiley.evaluate
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -433,86 +467,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          dataset.py
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dataset/" class="md-nav__link">
         dataset.py
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#smiley.dataset" class="md-nav__link">
-    smiley.dataset
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset" class="md-nav__link">
-    Dataset
-  </a>
-  
-    <nav class="md-nav" aria-label="Dataset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.load" class="md-nav__link">
-    load()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.set_data_dir" class="md-nav__link">
-    set_data_dir()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smiley.dataset.LoadError" class="md-nav__link">
-    LoadError
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -558,49 +517,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#smiley.dataset" class="md-nav__link">
-    smiley.dataset
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset" class="md-nav__link">
-    Dataset
-  </a>
-  
-    <nav class="md-nav" aria-label="Dataset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.load" class="md-nav__link">
-    load()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smiley.dataset.Dataset.set_data_dir" class="md-nav__link">
-    set_data_dir()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smiley.dataset.LoadError" class="md-nav__link">
-    LoadError
+  <a href="#smiley.evaluate" class="md-nav__link">
+    smiley.evaluate
   </a>
   
 </li>
@@ -618,181 +536,44 @@
               
                 
                 
-                  <h1>dataset.py</h1>
+                  <h1>evaluate.py</h1>
                 
                 <div class="doc doc-object doc-module">
-<h2 class="hidden-toc" id="smiley.dataset" style="visibility: hidden; position: absolute;">
+<h2 class="hidden-toc" id="smiley.evaluate" style="visibility: hidden; position: absolute;">
         </h2>
 <div class="doc doc-contents first">
-<p>Module to define Dataset class, and simplify data loading into memory. A unique class is defined here: <code>Dataset</code>. This class will help to deal with data transformation and input dataframe reading.</p>
-<p>Especially, it can convert the raw <code>smile</code> column into converted bytes to treat the Problem 1.</p>
+<p>This modules contains one only function <code>evaluate</code> to help evaluating trained model. It takes as input :</p>
+<ul>
+<li><code>model</code>: the name of the model to evalute (within <code>model1</code> or <code>model2</code> choices)</li>
+<li><code>function</code>: the metric function to use during evaluation. The default metric is <code>sklearn.metrics.f1_score</code>.</li>
+<li><code>data_dir</code>: the location of the input data. By default, will look in the <code>$ROOT_dir/data</code> folder</li>
+<li><code>root_dir</code>: the location of the directory containing models, data and mlflow directories.</li>
+</ul>
 <p><strong>Examples:</strong></p>
 <br />
 <div class="highlight">
-<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dataset</span><span class="o">.</span><span class="n">transform_smile</span><span class="p">(</span><span class="n">smile_col</span><span class="o">=</span><span class="s1">'smiles'</span><span class="p">)</span>
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">smiley.evaluate</span> <span class="kn">import</span> <span class="n">evaluate</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">model</span> <span class="o">=</span> <span class="s1">'model1`# To evalute model1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">data_dir</span> <span class="o">=</span> <span class="s1">'./data'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">root_dir</span> <span class="o">=</span> <span class="s1">'.'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">evalute</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=</span><span class="n">root_dir</span><span class="p">)</span>
+<span class="n">O</span><span class="o">.</span><span class="mi">875</span>
 </code></pre>
 </div>
 <div class="doc doc-children">
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="smiley.dataset.Dataset">
-
-        <code>Dataset</code>
 
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>Class Dataset to load data into memory.</p>
-<div class="doc doc-children">
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="smiley.dataset.Dataset.__init__">
-
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-      </h3>
-<div class="doc doc-contents ">
-<p>Initialize Dataset class.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data_dir</code></td>
-<td><code>Path</code></td>
-<td>
-<p>Location for data directory containing raw csv file. Defaults to None. If None, the default argument will be set as default data_dir for project.</p>
-</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>load</code></td>
-<td><code>bool</code></td>
-<td>
-<p>Load dataframe into memoery. Defaults to True.</p>
-</td>
-<td><code>True</code></td>
-</tr>
-</tbody>
-</table>
-<details class="quote">
-          <summary>Source code in <code>smiley/dataset.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">"""Initialize Dataset class.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        data_dir (Path, optional): Location for data directory containing raw csv file. Defaults to None. If None, the default argument will be set as default data_dir for project.</span>
-<span class="sd">        load (bool, optional): Load dataframe into memoery. Defaults to True.</span>
-<span class="sd">    """</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">set_data_dir</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">"dataset_multi.csv"</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">load</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="smiley.dataset.Dataset.load">
-
-<code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-      </h3>
-<div class="doc doc-contents ">
-<p>Load csv located at <code>self.path</code> into class memory.</p>
-<details class="quote">
-          <summary>Source code in <code>smiley/dataset.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">"""Load csv located at `self.path` into class memory."""</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loading dataset from </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">input_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-method">
-<h3 class="doc doc-heading" id="smiley.dataset.Dataset.set_data_dir">
-
-<code class="highlight language-python"><span class="n">set_data_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dir</span><span class="p">)</span></code>
-
-
-      </h3>
-<div class="doc doc-contents ">
-<p>Set data_dir attributes.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data_dir</code></td>
-<td><code>str, pathlib.Path</code></td>
-<td>
-<p>The location of the data_dir if not by default.</p>
-</td>
-<td><em>required</em></td>
-</tr>
-</tbody>
-</table>
-<details class="quote">
-          <summary>Source code in <code>smiley/dataset.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">set_data_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dir</span><span class="p">):</span>
-    <span class="sd">"""Set data_dir attributes.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        data_dir (str, pathlib.Path): The location of the data_dir if not by default.</span>
-<span class="sd">    """</span>
-    <span class="k">if</span> <span class="n">data_dir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">data_dir</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">Paths</span><span class="p">()[</span><span class="s2">"data"</span><span class="p">]</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="doc doc-object doc-class">
-<h2 class="doc doc-heading" id="smiley.dataset.LoadError">
-
-        <code>LoadError</code>
 
 
 
-      </h2>
-<div class="doc doc-contents ">
-<p>An exception raised when the data is not loaded.</p>
-</div>
-</div>
-</div>
+
+
+
+
+
+
+  </div>
 </div>
 </div>
                 
@@ -813,7 +594,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../model/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../train/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -822,19 +603,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                model.py
+                train.py
               </div>
             </div>
           </a>
         
         
-          <a href="../utils/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../predict/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                utils.py
+                predict.py
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

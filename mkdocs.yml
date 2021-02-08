@@ -25,15 +25,19 @@ theme:
 nav:
   - Home: README.md
   - Getting started:
-      - Installation: installation.md
-      - Train your models: training.md
+      - Models' architecture: architecture.md
+      - Play with your models: play.md
+      - Deploy your application: deploy.md
+
   - References:
-      - train.md
-      - learner.md
-      - mlflow.md
-      - model.md
-      - dataset.md
-      - utils.md
+      - train.py: train.md
+      - evaluate.py: evaluate.md
+      - predict.py: predict.md
+      - learner.py: learner.md
+      - mlflow.py: mlflow.md
+      - model.py: model.md
+      - dataset.py: dataset.md
+      - utils.py: utils.md
 
 markdown_extensions:
   - meta

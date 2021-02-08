@@ -1,3 +1,21 @@
+"""
+This modules contains one only function `evaluate` to help evaluating trained model. It takes as input :
+
+  - `model`: the name of the model to evalute (within `model1` or `model2` choices)
+  - `function`: the metric function to use during evaluation. The default metric is `sklearn.metrics.f1_score`.
+  - `data_dir`: the location of the input data. By default, will look in the `$ROOT_dir/data` folder
+  - `root_dir`: the location of the directory containing models, data and mlflow directories.
+
+Example:
+```python
+>>> from smiley.evaluate import evaluate
+>>> model = 'model1`# To evalute model1
+>>> data_dir = './data'
+>>> root_dir = '.'
+>>> evalute(model=model, data_dir=data_dir, root_dir=root_dir)
+O.875
+```
+"""
 import tensorflow as tf
 
 from .learner import f1_score

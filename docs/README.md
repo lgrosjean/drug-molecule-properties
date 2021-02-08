@@ -1,10 +1,9 @@
 # 💊 Drug Molecule Properties Forecasting
 
-Project to predict drug molecules properties with Deep Learning
+The goal of this project is to predict drug molecules properties with Deep Learning. 
 
 ## Quick start
 
-### Installation
 
 *This process supposes that you have [Anaconda](https://www.anaconda.com/distribution/ "Anaconda homepage") (or [Miniconda](https://docs.conda.io/en/latest/miniconda.html "Miniconda homepage")) already installed, with [git](https://git-scm.com/downloads "Git download page").*
 
@@ -38,10 +37,16 @@ Finally, build local project into a propre Python package:
 ```python
 >>> import smiley
 >>> print(smiley.__version__)
-"0.0.1"
+"0.0.2"
 ```
 
+To have a better understanding of the package and how to play with your models, please follow [this documentation](play.md).
 
-### Use with Docker
+## Flask application
 
-https://github.com/ageron/handson-ml2/tree/master/docker
+To install your Flask application, please see [this documentation](deploy.md).
+
+
+## References
+
+A full package references is also available for information [here](/train/).

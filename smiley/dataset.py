@@ -1,5 +1,13 @@
 """
-Module to define Dataset class, and simplify data loading into memory. A unique class is defined here: `Dataset`.
+Module to define Dataset class, and simplify data loading into memory. A unique class is defined here: `Dataset`. This class will help to deal with data transformation and input dataframe reading.
+
+Especially, it can convert the raw `smile` column into converted bytes to treat the Problem 1.
+
+Example:
+```python
+>>> dataset = Dataset()
+>>> dataset.transform_smile(smile_col='smiles')
+```
 """
 from pathlib import Path
 import logging

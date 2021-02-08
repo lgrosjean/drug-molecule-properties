@@ -5,7 +5,7 @@ lab:
 	jupyter lab
 
 build:
-	docker build . -t servier
+	docker-compose build
 
 run:
 	docker run --name servier -it servier

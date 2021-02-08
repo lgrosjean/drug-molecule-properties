@@ -1,3 +1,19 @@
+"""
+Core model to train our models. Two models can be trained :
+
+ - `model1`: will train the `Model1Learner`
+ - `model2`: will train the `Model2Learner`
+
+It also creates Mlflow tracking experience to quicker check if performance has improved or not. All the tracking experiments can be found through: 
+
+```sh
+$ mlflow ui --port 54180
+```
+
+It will also convert Keras model into TfSavedModel to be integrated in Tensorflow Serving services, to request predictions. By defaults, each model will be saved in the corresponding folder in the `model/models` folder.
+
+In particular, the model2 model has to be transform in a specific `TFModel` in order to understand raw string with shape=1 as inputs during serving.
+"""
 import os
 import logging
 import time
@@ -35,8 +51,20 @@ def _check_input(model: str):
         )
 
 
-def train(model, experiment_name, best_metric="val_accuracy", **kwargs):
+def train(
+    model: str, experiment_name: str = None, best_metric="val_accuracy", **kwargs
+):
+    """Base method to train a model. Will train the model input based on `MODEL_DICT` correspondance, and define the `experiment_name` in MlFlow tracking.
+
+    Args:
+        model (str): the model to train. Only two choices: `model1` or `model2`.
+        experiment_name (str, optional): The experiment name to define in MlFlow tracking server. Defaults to None. If None, will be define with `model` value.
+        best_metric (str, optional): The metrics on which performing evaluation of the model, and to check if performance has improved since best last model. Defaults to "val_accuracy".
+    """
     _check_input(model)
+
+    if experiment_name is None:
+        experiment_name = model
 
     owd = os.getcwd()
     root_dir = Paths().root_dir
@@ -124,11 +152,21 @@ def train(model, experiment_name, best_metric="val_accuracy", **kwargs):
 
 
 class TFModel(tf.Module):
+    """Specific class to transform `tf.keras.Model` into `tf.Module` to understand raw string input during prediction. Its two attributes will be integrated in the saving, especially the `prediction` which will be integrated in the signatures of the SavedModel."""
+
     def __init__(self, model: tf.keras.Model) -> None:
         self.model = model
 
     @tf.function(input_signature=[tf.TensorSpec(shape=(1,), dtype=tf.string)])
-    def prediction(self, review: str):
+    def prediction(self, smile: str):
+        """The base prediction model to define input_signature. Will return a dictionnary as prediction in the format: `{"prediction": prediction}`
+
+        Args:
+            smile (str): The input raw smile as string.
+
+        Returns:
+            dict: A dict for the prediction containing only the key "prediction"
+        """
         return {
-            "prediction": self.model(review),
+            "prediction": self.model(smile),
         }

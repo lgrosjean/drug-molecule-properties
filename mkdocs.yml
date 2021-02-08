@@ -30,6 +30,7 @@ nav:
   - References:
       - train.md
       - learner.md
+      - mlflow.md
       - model.md
       - dataset.md
       - utils.md

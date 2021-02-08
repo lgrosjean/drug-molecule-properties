@@ -16,6 +16,10 @@ Example:
 O.875
 ```
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import tensorflow as tf
 
 from .learner import f1_score

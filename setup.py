@@ -1,3 +1,6 @@
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import setuptools
 
 from smiley import __version__

@@ -14,6 +14,10 @@ It will also convert Keras model into TfSavedModel to be integrated in Tensorflo
 
 In particular, the model2 model has to be transform in a specific `TFModel` in order to understand raw string with shape=1 as inputs during serving.
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import os
 import logging
 import time

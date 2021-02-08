@@ -4,6 +4,10 @@ This module contains all the Learner to prepare data, prepare model et start tra
 - `Model1Learner` whose aim is to deal with the model 1 problem
 - `Model2Learner` whose aim is to deal with the model 2 problem
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import logging
 
 import numpy as np

@@ -6,6 +6,10 @@
  - `get_last_version`: to find the number of versions already trained for the provided `experiment_name`
  - `get_new_version`: to find the new number of version for the in-progress training.
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import os
 
 import mlflow

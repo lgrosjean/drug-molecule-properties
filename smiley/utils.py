@@ -1,3 +1,6 @@
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 from os.path import abspath
 from pathlib import Path
 

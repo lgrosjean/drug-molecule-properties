@@ -1,3 +1,6 @@
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import sys
 import argparse
 from pathlib import Path

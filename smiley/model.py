@@ -7,6 +7,10 @@ The most important parts are defined in the two mains classes:
  - `Model1`
  - `Model2`
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import tensorflow as tf
 from tensorflow.keras import Model, Input
 from tensorflow.keras.layers import (

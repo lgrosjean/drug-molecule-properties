@@ -1,3 +1,6 @@
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 from rdkit.Chem import (  # pylint: disable=no-name-in-module
     rdMolDescriptors,
     MolFromSmiles,

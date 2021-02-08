@@ -29,6 +29,10 @@ Example:
     O.976
     ```
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 import tensorflow as tf
 
 from .train import MODEL_DICT, _check_input

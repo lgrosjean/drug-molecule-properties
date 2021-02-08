@@ -1,3 +1,6 @@
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 

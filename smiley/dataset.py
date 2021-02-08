@@ -9,6 +9,10 @@ Example:
 >>> dataset.transform_smile(smile_col='smiles')
 ```
 """
+
+# Authors: Léo Grosjean <leo.grosjean@live.fr>
+# License: GPL3
+
 from pathlib import Path
 import logging
 

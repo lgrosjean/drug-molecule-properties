@@ -1,16 +1,31 @@
 version: "3.9"
 services:
-  app:
+  flask_server:
+    container_name: flask_server
     build: ./app
     image: flask-app
-    container_name: app
     ports:
-      - "5000:5000"
-  serving:
+      - 5000:5000
+    depends_on:
+      - tf-serving
+    networks:
+      ml-network:
+        aliases:
+          - flask_server
+  tf-serving:
     build: ./model
     image: tf-models
-    container_name: tf
+    container_name: tf-serving
     ports:
       - "8500:8500"
       - "8501:8501"
     command: --model_config_file=/config/config.conf
+    networks:
+      - ml-network
+
+volumes:
+  ml-db:
+    name: ml-db
+
+networks:
+  ml-network:

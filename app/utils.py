@@ -39,7 +39,7 @@ class Prediction:
     def set_url(self, model: str = None):
         if not model is None:
             self.model = model
-        self.url = f"http://localhost:8501/v1/models/{self.model}:predict"
+        self.url = f"http://tf-serving:8501/v1/models/{self.model}:predict"
 
     def predict(self, inputs: str = None) -> dict:
         if not inputs is None:

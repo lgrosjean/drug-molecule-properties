@@ -22,6 +22,7 @@ class Paths:
 
     def __init__(
         self,
+        root_dir=None,
         src_dirname="smiley",
         data_dirname="data",
         app_dirname="app",
@@ -39,7 +40,10 @@ class Paths:
             mlruns_dirname (str, optional): Name of the MlFlow runs directory to save trainings. Defaults to "mlruns".
             force (bool, optional): [description]. Defaults to False.
         """
-        self.root_dir = Path(abspath(__file__)).parents[1]
+        if root_dir is None:
+            self.root_dir = Path(abspath(__file__)).parents[1]
+        else:
+            self.root_dir = Path(root_dir).absolute()
         self.src_dirname = src_dirname
         self.data_dirname = data_dirname
         self.app_dirname = app_dirname

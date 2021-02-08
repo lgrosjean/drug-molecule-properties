@@ -274,17 +274,18 @@ class OneColLearner(BaseTrainer):
 class Model1Learner(OneColLearner):
     """Model1Learner to use to solve the model 1 problem with converted smiles as input."""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, fit=True, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = "Model1_Learner"
         self.input_col = [i for i in range(0, 2048)]
         self.set_input_shape(len(self.input_col))
         self.set_model(Model1)
-        self.fit()
-        self.prepare()
+        if fit:
+            self.fit()
 
     def fit(self):
         self.dataset.transform_smile()
+        self.prepare()
 
 
 class Model2Learner(OneColLearner):

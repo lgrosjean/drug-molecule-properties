@@ -52,7 +52,12 @@ def _check_input(model: str):
 
 
 def train(
-    model: str, experiment_name: str = None, best_metric="val_accuracy", **kwargs
+    model: str,
+    experiment_name: str = None,
+    data_dir=None,
+    root_dir=None,
+    best_metric="val_accuracy",
+    **kwargs,
 ):
     """Base method to train a model. Will train the model input based on `MODEL_DICT` correspondance, and define the `experiment_name` in MlFlow tracking.
 
@@ -67,16 +72,17 @@ def train(
         experiment_name = model
 
     owd = os.getcwd()
-    root_dir = Paths().root_dir
+    root_dir = Paths(root_dir=root_dir).root_dir
     os.chdir(root_dir)
 
     mlflow.set_experiment(experiment_name)
-    tracker = MlFlowTracker()
+    tracker = MlFlowTracker(root_dir=root_dir)
+    print(tracker.root_dir)
 
     timestamp = time.strftime("%Y%m%d%H%M")
     run_name = f"{experiment_name}_{timestamp}"
 
-    learner = MODEL_DICT.get(model)()
+    learner = MODEL_DICT.get(model)(data_dir=data_dir)
     print(learner.name)
 
     version = tracker.get_new_version(experiment_name)
@@ -116,7 +122,7 @@ def train(
             learner.model.model, model_name, signature=signature, save_format="tf"
         )
 
-    models_path = Paths().model / "models"
+    models_path = Paths(root_dir=root_dir).model / "models"
     if not models_path.exists():
         models_path.mkdir()
 

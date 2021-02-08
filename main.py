@@ -1,6 +1,6 @@
 import sys
 import argparse
-from smiley.ml.train import train as _train
+from smiley.train import train as _train
 
 
 def format_msg(msg, inputs=None):

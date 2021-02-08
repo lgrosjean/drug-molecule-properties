@@ -17,6 +17,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     python_requires=">=3.6",
     entry_points={
-        "console_scripts": ["servier=smiley.__main__:main"],
+        "console_scripts": ["servier=smiley.main:main"],
     },
 )
